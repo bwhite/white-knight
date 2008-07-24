@@ -1,0 +1,71 @@
+FileList 		images
+InitialFrameNum 	0
+LineSkip 		0
+
+#PSO Executable
+StartFrame		0
+TruthPath		../input/ETI-VS2-MO-2-C3/truth/
+TruthExtension		jpeg
+PSONumAgents		40
+PSONumIters		20
+PSOSocial			1.3
+PSOCognitive			2.8
+PSOInertial			.9
+PSOUpdateMode			1
+
+PSODimension1			Alpha/.000001/.1
+PSODimension2			InitialWeight/.0001/.5
+PSODimension3			InitialVariance/15/70
+PSODimension4			MinTotalBgWeight/.2/.9
+#PSODimension5			Beta/0.001/2
+#PSODimension5			MinSqrMahalDistanceThresh/4/12.25
+PSODimension5			MinDistanceThresh/2/12.25
+
+#PSO Frames
+TruthFrame1		163
+TruthFrame2		65
+#TruthFrame3		126
+TruthFrame3		207
+
+#NonParametric
+KDEWindowSize		50
+MinBackgroundThresh	.0003
+
+#Grimson
+#Generation: 15 Agent: 37 Fitness: 2.88968
+Alpha 0.006711
+Beta 1
+MinTotalBgWeight 0.7
+InitialWeight 0.05
+InitialVariance 30
+MinSqrMahalDistanceThresh 6.25
+MinDistanceThresh 2.5
+
+#Kgauss
+LogName				output.log
+Mode				1
+OutputSkip			20
+BlurIters			3
+BlurThresh			140
+JoinComponentsX			5
+JoinComponentsY			5
+EdgeDiffThresh			.2
+MinimumArea			250
+Verbosity			0
+
+#Background Subtraction Settings
+NumberOfGaussians		4
+MaxVariance			74.283643
+MinVariance 			0
+RhoMean 			0.082468
+RhoVariance 			0.077951
+MaxVarianceIncrease 		100
+#MinSqrMahalDistanceThresh	 57.722501
+MinSqrMahalDistanceHighPass	85
+AlphaOn				 1
+AlphaOff			2
+#InitialBgWeight should be larger than initial weight
+WeightThresh			 1569.732938
+InitialBgWeight 		 5000
+MinWeight			0
+MaxWeight			10000
