@@ -1,0 +1,7 @@
+
+REQUIRES
+OpenCV
+LibSVM (in the object classification folder)
+DevIL
+SWIG
+Python

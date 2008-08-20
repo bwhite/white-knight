@@ -1,7 +1,7 @@
 WARNINGS = -Wall -Wextra
 #LIBRARIES = -lIL -ljpeg -lpng -lcv -lcxcore -lhighgui -framework OpenGL -framework GLUT -lpthread
-LIBRARIES = -lIL -ljpeg -lpng -lcv -lcxcore -lhighgui -lGL -lGLEW -lglut -lpthread
-#LIBRARIES = -static -lIL -ljpeg -lpng -lcv -lcxcore -lhighgui -lpthread
+#LIBRARIES = -lIL -ljpeg -lpng -lcv -lcxcore -lhighgui -lGL -lGLEW -lglut -lpthread
+LIBRARIES = -static -lIL -ljpeg -lpng -lcv -lcxcore -lhighgui -lpthread
 #LIBRARIES = -lIL -ljpeg -lpthread
 #2 sets of configuration are provided, one for debugging (the first) and one for speed on the system that I am using (you may need to change this!)
 
@@ -117,8 +117,8 @@ chipper.o: ${SRCDIR}/chipper.cpp
 		${CC} ${CPPFLAGS} ${GLOBALOPTS} ${OPTIMAL} -c ${SRCDIR}/chipper.cpp
 
 #Copies the object file from the libsvm dir
-svm.o: ${SRCDIR}/objectClassifier/libsvm-2.83/svm.o
-		cp ${SRCDIR}/objectClassifier/libsvm-2.83/svm.o ./
+svm.o: ${SRCDIR}/objectClassifier/libsvm-2.86/svm.o
+		cp ${SRCDIR}/objectClassifier/libsvm-2.86/svm.o ./
 
 svmtest.o: ${SRCDIR}/svmtest.cpp
 		${CC} ${CPPFLAGS} ${GLOBALOPTS} ${OPTIMAL} -c ${SRCDIR}/svmtest.cpp
