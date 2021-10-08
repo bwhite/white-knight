@@ -45,7 +45,7 @@ def find_value(config_list, value_name):
 def PushElement(x):
 	global config_list
 	config_list.push_back(x)
-
+// kjrvbnervskjd,sv
 #Takes an object and returns true if it passes all of the requirements for an object to be considered in matching
 def ViableObject(x):
 	area = x.value('area')
@@ -110,7 +110,7 @@ class SurveillanceObject(object):
 		exit()
 	def valuei(self,name):
 		for attribute in self.__features:
-			if attribute[0] == name:
+			if attribute[0] == name:                                    #jkrfsndfvm
 				return int(attribute[1])
 		print 'valuei: Value',name,'not found in object, this should be an exception!'
 		self.dump_features()
